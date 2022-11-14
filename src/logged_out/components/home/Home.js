@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import HeadSection from "./HeadSection";
 import PricingSection from "./PricingSection";
 
+
 function Home(props) {
   const { selectHome } = props;
   useEffect(() => {
@@ -11,7 +12,7 @@ function Home(props) {
   return (
     <Fragment>
       <HeadSection />
-      
+
     </Fragment>
   );
 }

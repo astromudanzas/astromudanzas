@@ -16,6 +16,7 @@ import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
 import landingImage from "./images/landing.gif";
 import logoImage from "./images/logo_naranja.png";
+import mapImage from "./images/map.png";
 
 const styles = (theme) => ({
   extraLargeButtonLabel: {
@@ -105,7 +106,7 @@ function HeadSection(props) {
   const { classes, theme, width } = props;
   return (
     <Fragment>
-      <div style={{ backgroundColor: "#000428", display: "flex" }}>
+      <div  style={{ backgroundColor: "#000428", display: "flex" }}>
         {/*Create a text next to logo saying "ASTROMUDANZAS" */}
         <Typography
           variant="h4"
@@ -130,16 +131,18 @@ function HeadSection(props) {
 
 
 
-      <div className={classNames("lg-p-top", classes.wrapper)}>
+      <div  className={classNames("lg-p-top", classes.wrapper)}>
 
-        <div className={classNames("container-fluid", classes.container)}>
+        <div     className={classNames("container-fluid", classes.container)}>
 
-          <Box display="flex" justifyContent="center" className="row">
+          <Box display="flex" justifyContent="center" className="row"               background-color="#ffeeff"
+>
 
-            <Card
+            <Card style={{backgroundImage: "url("+mapImage+")"}}
               className={classes.card}
               data-aos-delay="200"
               data-aos="zoom-in"
+
             >
 
               <div className={classNames(classes.containerFix, "container")}>
@@ -147,7 +150,7 @@ function HeadSection(props) {
 
 
                 <Box justifyContent="space-between" className="row">
-                  <Grid item xs={12} md={5}>
+                  <Grid item xs={12} md={12}>
 
                     <Box
                       display="flex"
@@ -159,13 +162,13 @@ function HeadSection(props) {
                         <Typography
                           variant={isWidthUp("lg", width) ? "h2" : "h3"}
                         >
-                          Mudanzas en toda Barcelona
+                          Mudanza Economica Barcelona Badalona y Provincia
                         </Typography>
                         <Typography
-                          variant={isWidthUp("lg", width) ? "h3" : "h4"}
+                          variant={isWidthUp("lg", width) ? "h3" : "h6"}
                         >
-                          ·Mudanzas locales - <b>Barcelona y alrededores</b> {"\n"}<br />
-                          ·Mudanzas en toda Cataluña y España
+                         <b>ASTROMUDANZAS</b> empresa especializada en mudanzas y traslados de cualquier dimensión, garantizamos un servicio de calidad y adaptable dirigido a <b>particulares</b> y <b>empresas</b> ante un traslado de vivienda o de oficinas.
+                          
                         </Typography>
                       </Box>
                       <div>
@@ -185,7 +188,7 @@ function HeadSection(props) {
                   </Grid>
                   <Hidden smDown>
                     {/*Vertically centered langingImage */}
-                    <Grid item md={7}>
+                    <Grid item md={10}>
                       <Box
 
                         display="flex"

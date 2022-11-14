@@ -15,6 +15,8 @@ import Testimonials from './testimonials/Testimonials';
 import Services from './services/Services';
 import PricingSection from './home/PricingSection';
 
+
+
 AOS.init({ once: true });
 
 const styles = (theme) => ({
@@ -103,17 +105,43 @@ function Main(props) {
   useEffect(fetchBlogPosts, [fetchBlogPosts]);
   useEffect(getlandingPageData, [getlandingPageData]);
   return (
+
     <div className={classes.wrapper}>
+    
+    <a
+        href="https://wa.me/34667053677?text=Hola,%20me%20interesan%20vuestros%20servicios%20de%20transporte%20y%20mudanzas."
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ position: 'fixed',
+          width: '60px',
+          height: '60px',
+          bottom: '40px',
+          right: '40px',
+          backgroundColor: '#25d366',
+          color: '#FFF',
+          borderRadius: '50px',
+          textAlign: 'center',
+          fontSize: '30px',
+          boxShadow: '2px 2px 3px #999',
+          zIndex: '100',}}
+      >
+        <i class="fa fa-whatsapp whatsapp-icon" style={{
+          marginTop: '16px',
+         
+        }}></i>
+      </a>
+
       {!isCookieRulesDialogOpen && (
         <CookieConsent
           handleCookieRulesDialogOpen={handleCookieRulesDialogOpen}
         />
       )}
-       <CookieRulesDialog
+      <CookieRulesDialog
         open={isCookieRulesDialogOpen}
         onClose={handleCookieRulesDialogClose}
       />
-       <Routing
+      <Routing
         blogPosts={blogPosts}
         selectHome={selectHome}
         selectBlog={selectBlog}
@@ -123,6 +151,7 @@ function Main(props) {
       <PricingSection />
       <Footer />
     </div>
+
   );
 }
 
