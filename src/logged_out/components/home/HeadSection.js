@@ -179,7 +179,7 @@ function HeadSection(props) {
                           size={isWidthUp("sm", width) ? "large" : "medium"}
                           className={classes.extraLargeButton}
                           classes={{ label: classes.extraLargeButtonLabel }}
-                          href="https://wa.me/34617968455?text=Hola,%20me%20interesan%20vuestros%20servicios%20de%20transporte%20y%20mudanzas."
+                          href="https://wa.me/34631786313?text=Hola,%20me%20interesan%20vuestros%20servicios%20de%20transporte%20y%20mudanzas."
                         >
                           Contactar
                         </Button>
